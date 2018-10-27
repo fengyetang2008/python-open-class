@@ -1,1 +1,2 @@
-# python-open-class
+# Python语法糖
+<hr>
