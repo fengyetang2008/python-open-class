@@ -106,7 +106,10 @@ def example_generator(in_list):
 
 def example_decorator():
     '''装饰器'''
-    pass
+    def inner():
+        func()
+
+    return inner
 
 
 '''
