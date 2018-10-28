@@ -13,7 +13,7 @@ def example_three_operator():
     a = max(b, c)
     a = c > b and c or b
     a = c if c > b else b
-    c = [b, c][c > b]
+    a = [b, c][c > b]
 
     return a
 
@@ -22,6 +22,8 @@ def example_base():
     a = 1; b = 2; c = 3
     b, c = c, b
     a < c < b < 5
+    '1' * 100
+    [1,2,3,4] + [5,6,7,8]
 
     l = [1, 2, 3, 4, 5]
     l[2]
@@ -31,9 +33,6 @@ def example_base():
     l[:-1]
     l[:]
     l[::2]
-
-    l + [6, 7, 8, 9, 10]
-    '1' * 100
 
 
 def example_with():
@@ -48,8 +47,20 @@ def example_for_else():
     '''for else'''
     for i in range(0):
         print(i)
+        break
     else:
         print('for end')
+
+
+def example_while_else():
+    '''while else'''
+    i = 1
+    while i:
+        print(i)
+        i -= 1
+        break
+    else:
+        print('while end')
 
 
 def example_try_else():
@@ -104,7 +115,7 @@ def example_generator(in_list):
         yield i * 2
 
 
-def example_decorator():
+def example_decorator(func):
     '''装饰器'''
     def inner():
         func()
