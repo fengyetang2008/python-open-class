@@ -1,14 +1,22 @@
-__doc__ = '''
+__doc__ = """
         语法糖（Syntactic sugar）：
             计算机语言中特殊的某种语法
             这种语法对语言的功能并没有影响
             对于程序员有更好的易用性
             能够增加程序的可读性
-        '''
+        """
+
+__all__ = ['example_three_operator', 'example_base', 'example_with', 'example_for_else',
+           'example_try_else', 'example_lambda', 'example_dynamic_args', 'example_express',
+           'example_generator', 'example_closure', 'example_decorator']
 
 
 def example_three_operator():
-    b = 2; c = 3
+    """
+        三目运算符
+    """
+    b = 2
+    c = 3
 
     a = max(b, c)
     a = c > b and c or b
@@ -19,6 +27,9 @@ def example_three_operator():
 
 
 def example_base():
+    """
+        常规操作
+    """
     a = 1; b = 2; c = 3
     b, c = c, b
     a < c < b < 5
@@ -37,7 +48,9 @@ def example_base():
 
 
 def example_with():
-    '''with 语法'''
+    """
+        with 语法
+    """
 
     with open('example_2.txt', 'r', encoding='utf-8') as f:
         for line in f:
@@ -45,7 +58,9 @@ def example_with():
 
 
 def example_for_else():
-    '''for else'''
+    """
+        for else
+    """
     for i in range(0):
         print(i)
     else:
@@ -53,7 +68,9 @@ def example_for_else():
 
 
 def example_try_else():
-    '''try else'''
+    """
+        try else
+    """
     try:
         1 / 1
     except Exception as e:
@@ -65,7 +82,9 @@ def example_try_else():
 
 
 def example_lambda(in_dict):
-    '''lambda 表达式， 匿名函数表达式'''
+    """
+        lambda 表达式， 匿名函数表达式
+    """
 
     print('in_dict:', in_dict)
     out_dict = sorted(in_dict.items(), key=lambda x: x[1])
@@ -73,13 +92,17 @@ def example_lambda(in_dict):
 
 
 def example_dynamic_args(*args, **kwargs):
-    '''动态参数'''
+    """
+        动态参数
+    """
     print(args)
     print(kwargs)
 
 
 def example_express(in_list):
-    '''推导式'''
+    """
+        推导式
+    """
 
     print('array before:', in_list)
     array = [i for i in in_list if i % 2 != 0] # 列表推导表达式
@@ -99,14 +122,35 @@ def example_express(in_list):
 
 
 def example_generator(in_list):
-    '''生成器'''
+    """
+        生成器
+    """
     for i in in_list:
         yield i * 2
 
 
-def example_decorator():
-    '''装饰器'''
-    pass
+def example_closure(a):
+    """
+        闭包
+    """
+    # a = 2
+
+    def inner_func(b):
+        return b * a
+
+    return inner_func
+
+
+def example_decorator(func):
+    """
+        装饰器
+    """
+    def inner_func():
+        # TODO something
+        func()
+        # TODO something else
+
+    return inner_func
 
 
 '''
@@ -114,9 +158,11 @@ def example_decorator():
 '''
 
 
-if '__main__'==__name__:
+if '__main__' == __name__:
     in_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 8, 7]
     in_dict = {'a': 10, 'b': 2, 'c': 3}
-    example_express(in_list)
+    # example_express(in_list)
     # example_lambda(in_dict)
     # example_dynamic_args(*in_list, **in_dict)
+    print(example_closure(3)('*'))
+
