@@ -1,4 +1,4 @@
-__doc__ = '''
+__doc__ = """        
         语法糖（Syntactic sugar）：
             计算机语言中特殊的某种语法
             这种语法对语言的功能并没有影响
@@ -68,7 +68,10 @@ def example_for_else():
 
 
 def example_while_else():
-    '''while else'''
+    """
+        while else
+    :return:
+    """
     i = 1
     while i:
         print(i)
@@ -146,6 +149,8 @@ def example_decorator(func):
         func()
 
     return inner
+
+
 def example_closure(a):
     """
         闭包
