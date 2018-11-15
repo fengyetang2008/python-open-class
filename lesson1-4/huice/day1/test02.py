@@ -1,10 +1,1 @@
-def mytest():
-	if True:
-		print('a')
-	else:
-		print('b')
-        print('c')
-
-mytest()
-
-
+def mytest():	if True:		print('a')	else:		print('b')		print('c')mytest()

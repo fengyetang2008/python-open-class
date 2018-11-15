@@ -1,7 +1,1 @@
-def print_str(s):
-    print('result:%s' %(s))
-
-
-if __name__ == '__main__':
-    print_str('hello world')
-
+def print_str(s):    print('result:%s' % s)if '__main__' == __name__:    print_str('hello world')

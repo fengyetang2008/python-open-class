@@ -19,5 +19,8 @@ d = 1 + 2 \
 e=[2,3,
 4,5]
 
-f=""" 我有两个
-物理行"""                    #三重双引号 ，结果会是
+from textwrap import dedent
+f = dedent("""
+      我有两个
+      物理行""")                    #三重双引号 ，结果会是
+print(f)
