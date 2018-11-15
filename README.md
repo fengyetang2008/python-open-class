@@ -116,7 +116,7 @@ example_dynamic_args(*l, **d)
 lambda x: x * 2
 ```
 Python中使用lambda表达式来实现匿名函数，观察上面的lambda表达式。其特点如下：
-- > 可以接受函数
+- > 可以接受参数
 - > 函数体只有一个表达式
 - > 无需显式的return语句
 - > 整个表达式在一个语法行内实现
