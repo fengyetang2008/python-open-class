@@ -1,3 +1,1 @@
-
-def print_str(s):
-    print('result:%s' %(s))
+def print_str(s):    print('result:%s' %(s))
